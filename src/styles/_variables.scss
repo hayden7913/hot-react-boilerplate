@@ -1,0 +1,35 @@
+// colors
+$black-faded: #424242;
+$blue: #3e86c7;
+$green: #2AB366;
+$green-light: #3dcb81;
+$green-dark: #01A150;
+$grey-light: #e2e2e2;
+$grey-medium: #f8f8f8;
+$grey-dark: #b0b0b0;
+$grey-super-dark: #757575;
+$grey-super-light: #fafafa;
+$teal-super-light: #5ec3be;
+$teal-light: #55b6b1;
+$white: #ffffff;
+$teal: #49ada4;
+$indigo: #4055d4;
+
+$hero-gradient-start: $green-light;
+$hero-gradient-finish: $green;
+
+$app-primary: $green-light;
+$landing-primary: $green;
+
+$test-border-color: transparent;
+$test-border-color: black;
+
+//fonts
+$font-main: 'Montserrat';
+$font-secondary: 'Roboto';
+
+// breakpoints
+$break-mobile: 480px;
+$break-tablet: 768px;
+$break-medium: 960px;
+$break-wide: 1024px;

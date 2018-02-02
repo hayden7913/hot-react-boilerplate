@@ -16,7 +16,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className='header'>
-          <h1>todo</h1>
+          <h1>todo all today</h1>
           <TodoTextInput newTodo={true}
                          onSave={::this.handleSave}
                          placeholder='What shall be broken ?' />

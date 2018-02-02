@@ -1,0 +1,53 @@
+.app-container {
+  max-width: 768px;
+  margin: 0 auto;
+
+  @include respond-to(small-screens) {
+    padding: 0 10%;
+  }
+
+  @include respond-to(smartphones) {
+    padding: 0 3%;
+  }
+
+  &.header-container {
+    // &:before {
+    //   @include vert-center-pseudo-helper();
+    // }
+
+    @include respond-to(small-screens) {
+      // padding: 0 10%;
+    }
+  }
+}
+
+.hide {
+  @include hide();
+}
+
+.landing-container {
+  border: 1px solid $test-border-color;
+  margin: 0 auto;
+  max-width: 1140px;
+  // background-color: $grey-light;
+}
+
+.module {
+  margin: 40px 0;
+}
+
+.search-container {
+  // border: 1px solid #000;
+  margin: 0 auto;
+  margin-top: 250px;
+  max-width: 760px;
+  text-align: center;
+}
+
+.well {
+  background-color: $white;
+  border: 1px solid $grey-dark;
+  border-radius: 4px;
+  padding: 20px;
+  width: 100%;
+}
