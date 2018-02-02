@@ -8,12 +8,12 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
-    './index',
+    './src/index',
   ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/static/',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -36,15 +36,4 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin(),
   ],
-  resolve: {
-    alias: {
-      // 'redux-devtools/lib': path.join(__dirname, '..', '..', 'src'),
-      // 'redux-devtools': path.join(__dirname, '..', '..', 'src'),
-      'react': path.join(__dirname, 'node_modules', 'react')
-    },
-    extensions: ['.js']
-  },
-  // resolveLoader: {
-  //   'fallback': path.join(__dirname, 'node_modules')
-  // },
 };
