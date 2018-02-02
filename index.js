@@ -1,9 +1,10 @@
-import 'todomvc-app-css/index.css';
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import configureStore from './store/configureStore';
 import Root from './containers/Root';
+
+import './index.css';
 
 const store = configureStore();
 

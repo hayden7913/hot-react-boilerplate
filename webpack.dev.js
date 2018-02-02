@@ -9,7 +9,7 @@ module.exports = merge(common, {
       {
         test: /(\.scss$|\.css$)/,
         exclude: /node_modules/,
-        use: ['css-loader', 'style-loader', 'raw-loader' 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },

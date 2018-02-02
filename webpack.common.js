@@ -1,7 +1,5 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
@@ -44,9 +42,9 @@ module.exports = {
       // 'redux-devtools': path.join(__dirname, '..', '..', 'src'),
       'react': path.join(__dirname, 'node_modules', 'react')
     },
-    extensions: ['', '.js']
+    extensions: ['.js']
   },
-  resolveLoader: {
-    'fallback': path.join(__dirname, 'node_modules')
-  },
+  // resolveLoader: {
+  //   'fallback': path.join(__dirname, 'node_modules')
+  // },
 };
