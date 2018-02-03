@@ -5,10 +5,9 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
+    'babel-polyfill',
     'react-hot-loader/patch',
-    './src/index',
+    './src/index.js',
   ],
   output: {
     filename: 'bundle.js',
@@ -20,6 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: ['babel-loader'],
       },
       {

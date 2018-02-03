@@ -1,10 +1,8 @@
 {
-  "name": "todomvc",
+  "name": "react-boilerplate",
   "version": "0.0.0",
-  "description": "TodoMVC example for redux",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js || true",
+    "start": "webpack-dev-server --config webpack.dev.js || true",
     "build": "webpack --env.production --config webpack.prod.js || true",
     "deploy": "npm run build && git cp 'Builds project for deployment' && git push heroku master || true",
     "lint:fix": "eslint --fix --ext .js ./ || true",
@@ -50,7 +48,6 @@
     "babel-preset-stage-0": "^6.3.13",
     "chalk": "^2.3.0",
     "clean-webpack-plugin": "^0.1.18",
-    "css-loader": "^0.28.7",
     "html-webpack-plugin": "^2.30.1",
     "node-libs-browser": "^0.5.2",
     "node-sass": "^4.6.0",
@@ -59,7 +56,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.12.3",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^1.9.0",
+    "webpack-dev-server": "^2.11.1",
     "webpack-merge": "^4.1.1"
   }
 }
