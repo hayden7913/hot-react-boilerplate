@@ -1,13 +1,13 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 const chalk = require('chalk');
-var config = require('./webpack.dev');
+var config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true,
-  stats: "minimal",
+  // stats: "minimal",
 }).listen(3000, 'localhost', function (err) {
   if (err) {
     console.log(err);

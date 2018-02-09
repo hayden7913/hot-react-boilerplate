@@ -4,7 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import configureStore from './store/configureStore';
 import Root from './containers/Root';
 
-import './styles/index.scss';
+// import './styles/index.scss';
 import './styles/index.css';
 
 const store = configureStore();
@@ -12,7 +12,7 @@ const store = configureStore();
 render(
   <AppContainer>
     <Root
-      store={ store }
+      store={store}
     />
   </AppContainer>,
   document.getElementById('root')
