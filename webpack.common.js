@@ -17,9 +17,6 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     loaders: [{
       test: /\.js$/,
@@ -35,7 +32,6 @@ module.exports = {
   ]},
   plugins: [
     new CleanWebpackPlugin(['bundle']),
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
     }),

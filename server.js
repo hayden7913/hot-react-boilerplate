@@ -3,6 +3,8 @@ var WebpackDevServer = require('webpack-dev-server');
 const chalk = require('chalk');
 var config = require('./webpack.dev');
 
+process.env.NODE_ENV = 'production'
+
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,

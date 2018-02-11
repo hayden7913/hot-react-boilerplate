@@ -16,7 +16,7 @@ export default class Header extends Component {
     return (
       <header className='header'>
         <img src="/public/images/dog.jpg" alt=""/>
-        <h1>get ready</h1>
+        <h1>get ready </h1>
         <span className='icon-plus'></span>
         <span className='icon-trash'></span>
         <TodoTextInput
