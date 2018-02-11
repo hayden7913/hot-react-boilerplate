@@ -1,19 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import AddProjectPage from './containers/AddProjectPage';
-import EditProjectPage  from './containers/EditProjectPage';
-import ProjectsPage from './containers/ProjectsPage';
-import TimeTrackerPage from './containers/TimeTrackerPage';
+import TodoApp from './containers/TodoApp';
+import Hello from './components/Hello';
 
 export default (
   <div>
     <Switch>
-      <Route exact path="/" component={TimeTrackerPage}/>
-      <Route exact path="/projects" component={ProjectsPage}/>
-      <Route exact path="/projects/new" component={AddProjectPage}/>
-      <Route path="/projects/:projectId" component={EditProjectPage}/>
-      {/* <Route path="/*" component={TimeTrackerPage}/> */}
+      <Route exact path="/" component={TodoApp}/>
+      <Route exact path="/hello" component={Hello}/>
     </Switch>
   </div>
 );
