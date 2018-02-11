@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // devtool: 'inline-source-map',
@@ -11,7 +13,7 @@ module.exports = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'bundle'),
     filename: 'bundle.js',
     publicPath: '/'
   },
@@ -21,9 +23,22 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      loaders: ['babel-loader'],
       exclude: /node_modules/,
       include: __dirname
     },
+    {
+      test: /\.(png|jpg|svg|woff|woff2|eot|ttf)(\?[a-z0-9]+)?$/,
+      exclude: /node_modules/,
+      loaders: ['file-loader'],
+    },
   ]},
+  plugins: [
+    new CleanWebpackPlugin(['bundle']),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'public', 'index.html'),
+    }),
+    // new webpack.NamedModulesPlugin(),
+  ],
 };

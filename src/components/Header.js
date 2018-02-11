@@ -15,7 +15,10 @@ export default class Header extends Component {
   render() {
     return (
       <header className='header'>
+        <img src="/public/images/dog.jpg" alt=""/>
         <h1>get ready</h1>
+        <span className='icon-plus'></span>
+        <span className='icon-trash'></span>
         <TodoTextInput
           newTodo={true}
           onSave={::this.handleSave}

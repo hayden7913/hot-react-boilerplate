@@ -6,6 +6,7 @@ import Root from './containers/Root';
 
 import './styles/index.css';
 // import './styles/index.scss';
+import './styles/icons/style.css';
 
 const store = configureStore();
 
