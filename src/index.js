@@ -4,8 +4,8 @@ import { AppContainer } from 'react-hot-loader';
 import configureStore from './store/configureStore';
 import Root from './containers/Root';
 
-// import './styles/index.scss';
 import './styles/index.css';
+// import './styles/index.scss';
 
 const store = configureStore();
 
@@ -25,7 +25,7 @@ if (module.hot) {
     render(
       <AppContainer>
         <RootContainer
-          store={ store }
+          store={store}
         />
       </AppContainer>,
       document.getElementById('root')
