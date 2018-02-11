@@ -25,6 +25,7 @@ module.exports = {
       {
         test: /\.(png|jpg|svg|woff|woff2|eot|ttf)$/,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: ['file-loader'],
       },
     ],

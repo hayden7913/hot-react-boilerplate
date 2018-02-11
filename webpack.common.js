@@ -41,4 +41,14 @@ module.exports = {
     }),
     // new webpack.NamedModulesPlugin(),
   ],
+  stats: {
+    timings: true,
+    warnings: true,
+    assets: false,
+    chunks: false,
+    colors: false,
+    errorDetails: false,
+    hash: false,
+    version: false,
+  },
 };

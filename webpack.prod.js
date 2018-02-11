@@ -6,15 +6,12 @@ const webpack = require('webpack');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   module: {
-    rules: [
+    loaders: [
       {
         test: /(\.scss$|\.css$)/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['raw-loader', 'sass-loader'],
-        }),
+        loader : ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader'),
       },
     ],
   },
@@ -22,10 +19,8 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
-    new UglifyJSPlugin({
-      sourceMap: true,
-    }),
     new ExtractTextPlugin('style.css'),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new UglifyJSPlugin({ sourceMap: true }),
   ],
-  stats: 'minimal',
 });
