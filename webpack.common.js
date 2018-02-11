@@ -39,7 +39,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
     }),
-    // new webpack.NamedModulesPlugin(),
+    new webpack.NamedModulesPlugin(),
   ],
   stats: {
     timings: true,
